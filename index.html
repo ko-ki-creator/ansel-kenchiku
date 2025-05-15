@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PF_3 | Ansel建築株式会社</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<!-- slickのCSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="header-wrapper">
+			<div class="header">
+				<div class="header-inner">
+					<a class="logo" href="#">
+						<p>Ansel建築 株式会社</p>
+					</a>
+					<div class="header-menu">
+						<a class="contact-btn" href="#contact">
+							<img src="images/send-plane.png" alt="お問い合わせ送信アイコン">
+							<p>お問い合わせ</p>
+						</a>
+						<!-- ハンバーガーメニュー -->
+						<button class="hamburger" id="js-hamburger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ナビゲーションメニュー展開 -->
+		<nav class="header-nav" id="js-nav">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a href="#philosophy">
+						<p class="item-large serif">Philosophy</p>
+						<div class="sp-flex">
+							<p class="item-small serif">理念</p>
+							<img src="images/nav-items-arrow.png" alt="">
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#news">
+						<p class="item-large serif">News</p>
+						<div class="sp-flex">
+							<p class="item-small serif">お知らせ</p>
+							<img src="images/nav-items-arrow.png" alt="">
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#company">
+						<p class="item-large serif">Company</p>
+						<div class="sp-flex">
+							<p class="item-small serif">Ansel建築について</p>
+							<img src="images/nav-items-arrow.png" alt="">
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#service">
+						<p class="item-large serif">Service</p>
+						<div class="sp-flex">
+							<p class="item-small serif">私たちのサービスについて</p>
+							<img src="images/nav-items-arrow.png" alt="">
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#model">
+						<p class="item-large serif">Model</p>
+						<div class="sp-flex">
+							<p class="item-small serif">施工事例</p>
+							<img src="images/nav-items-arrow.png" alt="">
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="contact-btn" href="#contact">
+						<img src="images/send-plane.png" alt="お問い合わせ送信アイコン">
+						<p>お問い合わせ</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- メインビジュアル -->
+		<section class="mv">
+			<div class="mv-wrapper">
+				<div class="mv-inner">
+					<img src="images/first-view.png" alt="リビングで家族がくつろいでいる写真">
+					<div class="catch-copy">
+						<div class="main-copy">
+							<p>
+								家族<span>との</span><br>
+								大切<span>な</span>時<span>を</span><br>
+								過<span>ごす</span>場所
+							</p>
+						</div>
+						<p class="sub-copy">
+							A place to spend <br>
+							precious time with family.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 理念 -->
+		<section class="philosophy" id="philosophy">
+			<div class="philosophy-wrapper">
+				<div class="philosophy-inner">
+					<div class="philosophy-container">
+						<div class="heading serif">
+							<h2 class="title">Philosophy</h2>
+							<p class="sub-title">理念</p>
+						</div>
+						<div class="philosophy-content">
+							<img src="images/philosophy.png" alt="">
+							<div class="description">
+								<p>
+									Ansel建築株式会社は、「家族との大切な時を過ごす場所」を提供することを使命としています。私たちは、お客様一人一人のライフスタイルや価値観に合わせた唯一無二の住まいを設計し、建築します。
+								</p>
+								<p>
+									私たちの家づくりは、ただの建物ではなく、家族が笑顔で過ごせる場所を作ることを目指しています。高品質な材料と最新の建築技術を駆使し、長く愛される家づくりに取り組んでいます。
+								</p>
+								<p>
+									また、お客様との信頼関係を大切にし、誠実な対応と細やかなサービスで、安心して任せていただけるパートナーであり続けます。Ansel建築は、全ての家族が自分たちの夢を形にできる場所を提供し続けます。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="philosophy-gradation"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- お知らせ -->
+		<section class="news" id="news">
+			<div class="news-wrapper">
+				<div class="news-container">
+					<div class="news-flex">
+						<div class="heading serif">
+							<h2 class="title">News</h2>
+							<p class="sub-title">お知らせ</p>
+						</div>
+						<div class="post-btn">
+							<button>
+								<span class="arrow prev-btn" id="prevBtn"></span>
+							</button>
+							<button>
+								<span class="arrow next-btn" id="nextBtn"></span>
+							</button>
+						</div>
+					</div>
+
+					<div class="news-scroll-arrow">
+						<p>scroll</p>
+						<img src="images/news-scroll-arrow.png" alt="">
+					</div>
+
+					<!-- お知らせ記事 -->
+					<div class="news-inner">
+						<div class="news-content" id="slider">
+							<article class="news-card">
+								<p class="date">2024.07.28</p>
+								<img src="images/news1.png" alt="新モデルハウスオープンのお知らせ">
+								<div class="news-text">
+									<p class="thema">新モデルハウスオープンのお知らせ</p>
+									<p class="text">新しくオープンしたモデルハウスのご紹介と見学会の開催日程についてお知らせします。</p>
+								</div>
+							</article>
+
+							<article class="news-card">
+								<p class="date">2024.06.15</p>
+								<img src="images/news2.png" alt="ホームフェアに出展します">
+								<div class="news-text">
+									<p class="thema">ホームフェアに出展します</p>
+									<p class="text">最新の住宅トレンドを紹介するホームフェアに出展します。ぜひお立ち寄りください。</p>
+								</div>
+							</article>
+
+							<article class="news-card">
+								<p class="date">2024.05.20</p>
+								<img src="images/news3.png" alt="新しいデザインコンセプト発表">
+								<div class="news-text">
+									<p class="thema">新しいデザインコンセプト発表</p>
+									<p class="text">Ansel建築の新しいデザインコンセプト「モダンナチュラル」を発表しました。</p>
+								</div>
+							</article>
+
+							<article class="news-card">
+								<p class="date">2024.04.10</p>
+								<img src="images/news4.png" alt="お客様の声特集">
+								<div class="news-text">
+									<p class="thema">お客様の声特集</p>
+									<p class="text">実際にAnsel HOMEに住んでいるお客様の声を集めた特集記事を公開しました。</p>
+								</div>
+							</article>
+
+							<article class="news-card">
+								<p class="date">2024.03.05</p>
+								<img src="images/news5.png" alt="お客様の声特集">
+								<div class="news-text">
+									<p class="thema">新しいショールームが完成しました</p>
+									<p class="text">新しくオープンしたショールームで最新の住宅設備をご覧いただけます。</p>
+								</div>
+							</article>
+						</div>
+
+						<div class="news-gradation"></div>
+
+						<!-- お知らせ一覧ボタン -->
+						<div class="news-btn">
+							<a href="#">
+								<p>お知らせ一覧</p>
+								<img src="images/news-arrow.png" alt="ボタンの矢印">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Ansel建築について -->
+		<section class="company" id="company">
+			<div class="company-wrapper">
+				<div class="company-inner">
+					<div class="company-container">
+						<div class="heading serif">
+							<h2 class="title">Company</h2>
+							<p class="sub-title">Ansel建築について</p>
+						</div>
+						<div class="company-content">
+							<img src="images/company.png" alt="">
+							<div class="description">
+								<p>
+									Ansel建築株式会社は、「家族との大切な時を過ごす場所」を提供することを使命としています。私たちは、お客様一人一人のライフスタイルや価値観に合わせた唯一無二の住まいを設計し、建築します。
+								</p>
+								<p>
+									私たちの家づくりは、ただの建物ではなく、家族が笑顔で過ごせる場所を作ることを目指しています。高品質な材料と最新の建築技術を駆使し、長く愛される家づくりに取り組んでいます。
+								</p>
+								<p>
+									また、お客様との信頼関係を大切にし、誠実な対応と細やかなサービスで、安心して任せていただけるパートナーであり続けます。Ansel建築は、全ての家族が自分たちの夢を形にできる場所を提供し続けます。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="company-gradation"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 私たちのサービスについて -->
+		<section class="service" id="service">
+			<div class="service-wrapper">
+				<div class="service-container">
+					<div class="heading serif">
+						<h2 class="title">Service</h2>
+						<p class="sub-title">私たちのサービスについて</p>
+					</div>
+					<div class="service-content">
+						<div class="service-item">
+							<img src="images/service1.png" alt="">
+							<div class="service-text">
+								<h3>注文住宅の設計・施工</h3>
+								<p>お客様のご要望を取り入れた完全オーダーメイドの住宅を提供します。</p>
+							</div>
+						</div>
+
+						<div class="service-item">
+							<img src="images/service2.png" alt="">
+							<div class="service-text">
+								<h3>リフォーム</h3>
+								<p>既存の住宅をリニューアルし、新しい価値を創造します。</p>
+							</div>
+						</div>
+
+						<div class="service-item">
+							<img src="images/service3.png" alt="">
+							<div class="service-text">
+								<h3>アフターサービス</h3>
+								<p>引渡し後の定期点検とメンテナンスを行い、長く安心してお住いいただけます。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="blue-back" src="images/blue-back.png" alt="">
+			</div>
+		</section>
+
+		<!-- 施工事例 -->
+		<section class="model" id="model">
+			<div class="model-wrapper">
+				<div class="model-container">
+					<div class="heading serif">
+						<h2 class="title">Model</h2>
+						<p class="sub-title">施工事例</p>
+					</div>
+					<div class="model-group">
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">モデルハウスA</h4>
+							</div>
+							<p>モダンデザインの3LDK住宅。<br class="br-sp">シンプルなデザインで機能性を重視。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-a-sub1.png" alt=""></div>
+									<div class="slick-img"><img src="images/model-a-sub2.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-a-sub3.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-a-sub4.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-a-sub5.jpg" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-a-sub1.png" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-a-sub2.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-a-sub3.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-a-sub4.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-a-sub5.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">施工例B</h4>
+							</div>
+							<p>自然素材を使用した温かみのある住宅。<br class="br-sp">自然との調和を意識したデザイン。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-b-sub1.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-b-sub2.png" alt=""></div>
+									<div class="slick-img"><img src="images/model-b-sub3.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-b-sub4.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-b-sub5.jpg" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-b-sub1.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-b-sub2.png" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-b-sub3.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-b-sub4.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-b-sub5.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">施工例C</h4>
+							</div>
+							<p>都市型コンパクト住宅。<br class="br-sp">限られたスペースを有効活用した設計。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-c-sub1.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-c-sub2.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-c-sub3.png" alt=""></div>
+									<div class="slick-img"><img src="images/model-c-sub4.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-c-sub5.jpg" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-c-sub1.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-c-sub2.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-c-sub3.png" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-c-sub4.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-c-sub5.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">施工例D</h4>
+							</div>
+							<p>和モダンなデザインの平屋。<br class="br-sp">伝統と現代を融合させたスタイル。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-d-sub1.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-d-sub2.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-d-sub3.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-d-sub4.png" alt=""></div>
+									<div class="slick-img"><img src="images/model-d-sub5.jpg" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-d-sub1.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-d-sub2.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-d-sub3.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-d-sub4.png" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-d-sub5.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">施工例E</h4>
+							</div>
+							<p>高断熱・高気密のエコ住宅。<br class="br-sp">省エネ性能を高めた快適な住まい。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-e-sub1.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-e-sub2.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-e-sub3.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-e-sub4.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-e-sub5.png" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-e-sub1.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-e-sub2.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-e-sub3.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-e-sub4.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-e-sub5.png" alt=""></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="model-content">
+							<div class="model-content-name">
+								<img src="images/house-icon.png" alt="">
+								<h4 class="serif">施工例F</h4>
+							</div>
+							<p>リゾート風デザインのセカンドハウス。<br class="br-sp">リラックスできる非日常空間。</p>
+
+							<div class="silider-container">
+								<div class="slider">
+									<div class="slick-img"><img src="images/model-f-sub1.png" alt=""></div>
+									<div class="slick-img"><img src="images/model-f-sub2.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-f-sub3.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-f-sub4.jpg" alt=""></div>
+									<div class="slick-img"><img src="images/model-f-sub5.jpg" alt=""></div>
+								</div>
+								<div class="thumbnail">
+									<div class="thumbnail-img"><img src="images/model-f-sub1.png" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-f-sub2.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-f-sub3.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-f-sub4.jpg" alt=""></div>
+									<div class="thumbnail-img"><img src="images/model-f-sub5.jpg" alt=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- お問い合わせフォーム -->
+		<section class="contact" id="contact">
+			<div class="contact-wrapper">
+				<div class="contact-container">
+					<div class="heading serif">
+						<h2 class="title">Contact</h2>
+						<p class="sub-title">お問い合わせフォーム</p>
+					</div>
+					<form>
+						<div class="form-wrapper">
+							<div class="contact-group">
+								<p class="contact-label required">お問い合わせ内容</p>
+								<div class="choice">
+									<label class="checkbox">
+										<input type="checkbox" name="hearing">
+										<label>話を聞いてみたい</label>
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="materials">
+										<label>資料が欲しい</label>
+										</label>
+									<label  class="checkbox">
+										<input type="checkbox" name="advice">
+										<label>その他のご相談（見学のご希望はこちら）</label>
+									</label>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label required">お名前</p>
+								<div>
+									<label>
+										<input type="text" name="name" class="contact-text">
+									</label>
+									<p class="error-message">※フルネームでご記入くださいませ。</p>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label">ふりがな</p>
+								<div>
+									<label>
+										<input type="text" name="furigana" class="contact-text">
+									</label>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label required">電話番号</p>
+								<div>
+									<label>
+										<input type="text" name="tel" class="contact-text">
+									</label>
+									<p class="error-message">※繋がりやすい番号をご記入くださいませ。</p>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label required">メールアドレス</p>
+								<div>
+									<label>
+										<input type="text" name="mail" class="contact-text">
+									</label>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label">ご住所</p>
+								<div>
+									<label>
+										<input type="text" name="address" class="contact-text">
+									</label>
+								</div>
+							</div>
+
+							<div class="contact-group">
+								<p class="contact-label">備考</p>
+								<div class="textarea-box">
+									<textarea class="contact-textarea" name="message" id="message"></textarea>
+									<p class="error-message">※こちらにお問い合わせ内容をご記入くださいませ。</p>
+								</div>
+							</div>
+						</div>
+
+						<button class="submit-btn">
+							<input type="submit" value="送信">
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- フッター -->
+	<footer>
+		<div class="footer-wrapper">
+			<div class="footer-inner">
+				<p class="footer-company-name">Ansel建築株式会社</p>
+				<div class="footer-company">
+					<div class="footer-about">
+						<p>〒123-4567</p>
+						<p>東京都新宿区西新宿1-1-1</p>
+						<p>Tel 03-1234-5678</p>
+					</div>
+					<div class="footer-description">
+						<div class="footer-detail">
+							<p class="tableheader">設立</p>
+							<p class="cell">2000年4月1日</p>
+						</div>
+						<div class="footer-detail">
+							<p class="tableheader">代表者</p>
+							<p class="cell">山田 太郎</p>
+						</div>
+						<div class="footer-detail">
+							<p class="tableheader">業種</p>
+							<p class="cell">注文住宅の販売</p>
+						</div>
+						<div class="footer-detail">
+							<p class="tableheader">サービス名</p>
+							<p class="cell">Ansel Home</p>
+						</div>
+						<div class="footer-detail">
+							<p class="tableheader">事業内容</p>
+							<p class="cell">注文住宅の設計・加工<br>リフォーム</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="footer-nav">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#philosophy">理念</a></li>
+					<li><a href="#news">ニュース</a></li>
+					<li><a href="#company">当社について</a></li>
+					<li><a href="#service">事業内容</a></li>
+					<li><a href="#model">施工事例</a></li>
+				</ul>
+			</nav>
+		</div>
+		<p class="copyright">©︎Ansel建築株式会社</p>
+	</footer>
+
+	<script src="js/main.js"></script>
+	<!-- slickのJavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
