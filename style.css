@@ -1,0 +1,13 @@
+body {
+    background-color: #ccc;
+  }
+  .container {
+    margin: 30px auto 0;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
