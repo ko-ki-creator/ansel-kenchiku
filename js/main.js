@@ -47,7 +47,7 @@ prevBtn.addEventListener('click', () => moveSlider('prev'));
 
 updateButtons();
 
-
+// 施工事例のスライド
 $(function () {
         $(".slider").slick({
         // autoplay: true,
