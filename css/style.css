@@ -1,0 +1,1365 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Noto Serif JP', sans-serif;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #333333;
+    --green: #2E5C63;
+    --dark-green: #196C95;
+    --blue: #2D73B1;
+}
+
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.serif {
+    font-family: 'Noto Serif JP', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+p {
+    letter-spacing: 0.1em;
+}
+
+#philosophy,
+#news,
+#company,
+#service,
+#model,
+#contact {
+    scroll-margin-top: 150px;
+}
+
+
+/* --------------------
+PC
+-------------------- */
+
+/* ------------------------------ヘッダー */
+.header-wrapper {
+    height: 100px;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.header {
+    width: 100%;
+    max-width: 1080px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    align-items: center;
+}
+
+.logo p {
+        color: var(--green);
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+.header-menu {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* お問い合わせボタン */
+.contact-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#2295CF, #196B94);
+    padding: 15px 35px;
+    border-radius: 30px;
+    transition: .2s;
+}
+
+.contact-btn img {
+    width: 24px;
+    min-height: 24px;
+}
+
+.contact-btn p {
+    color: var(--white);
+    font-size: 21px;
+}
+
+.contact-btn:hover {
+    opacity: 0.8;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    width: 48px;
+    height: 100%;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #124E6D;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    margin: 10px 0;
+}
+
+.hamburger span:nth-child(3) {
+    top: 0;
+}
+
+/* ハンバーガーメニュークリック後のスタイル */
+.hamburger.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    top: -15px;
+    transform: rotate(-45deg);
+}
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header-nav.active {
+    transform: translate(0);
+}
+
+/* ナビゲーションメニュー展開 */
+.header-nav {
+    position: fixed;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color: var(--black);
+    transition: ease .5s;
+    z-index: 99;
+}
+
+.nav-list {
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 0;
+}
+
+.nav-item {
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.nav-item a {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--white);
+}
+
+.item-large {
+    font-size: 40px;
+}
+
+.sp-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.item-smail {
+    font-size: 21px;
+}
+
+/* 矢印 */
+.sp-flex img {
+    width: 60px;
+    height: 6px;
+}
+
+.nav-item .contact-btn {
+    display: none;
+}
+
+
+/* ------------------------------メインビジュアル */
+.mv-wrapper {
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+}
+
+/* メイン写真 */
+.mv-inner img {
+    width: 62vw;
+    max-height: 80vh;
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+    z-index: 30;
+}
+
+.catch-copy {
+    width: 60vw;
+    height: 60vh;
+    min-height: 40vh;
+    background: linear-gradient(90deg, #2295CF, #2590A0);
+    /* padding-top: 90px; */
+    padding-top: 2%;
+    padding-left: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+/* 「家族との大切な時を過ごす場所」 */
+.main-copy {
+    margin-bottom: 25px;
+}
+
+.main-copy p {
+    color: var(--white);
+    /* font-size: 70px; */
+    font-size: 5vw;
+    font-weight: 500;
+    text-shadow: 3px 3px 1px var(--dark-green);
+
+    span {
+        font-size: 0.85em;
+    }
+}
+
+.sub-copy {
+    color: var(--dark-green);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+/* ------------------------------理念 */
+.philosophy-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.philosophy-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100px;
+}
+
+/* 見出し */
+.heading {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 11;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.sub-title {
+    font-size: 21px;
+}
+
+.heading::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--green);
+}
+
+.philosophy-content {
+    display: flex;
+    gap: 50px;
+
+    img {
+        width: 402px;
+        height: 283px;
+    }
+}
+
+/* 本文 */
+.description {
+    color: var(--black);
+    line-height: 27px;
+
+    p:not(:last-child) {
+        margin-bottom: 27px;
+    }
+}
+
+.philosophy-inner {
+    position: relative;
+}
+
+.philosophy-gradation {
+    width: 25vw;
+    min-width: 286px;
+    height: 181px;
+    background: linear-gradient(90deg, #2295CF, #2590A0);
+    position: absolute;
+    top: 220px;
+    z-index: 1;
+}
+
+
+/* ------------------------------お知らせ */
+.news-wrapper {
+    width: 100%;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 11;
+}
+
+.news-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.news-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .heading {
+        margin-bottom: 0;
+    }
+}
+
+/* スライドボタン */
+.post-btn {
+    display: flex;
+    gap: 30px;
+    width: 150px;
+}
+
+.arrow{
+    position: relative;
+    display: inline-block;
+    color: var(--black);
+    vertical-align: middle;
+}
+
+.arrow::before,
+.arrow::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+}
+
+/* 戻るボタン */
+.prev-btn {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid var(--green);
+    transition: .2s;
+}
+
+.prev-btn:hover {
+    background: #BBD5D9;
+}
+
+.prev-btn::after {
+    left: 25px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+/* 次へボタン */
+.next-btn {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid var(--green);
+    transition: .2s;
+}
+
+.next-btn:hover {
+    background: #BBD5D9;
+}
+
+.next-btn::after {
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.news-scroll-arrow {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: baseline;
+    margin-bottom: 20px;
+    display: none; /*PC非表示*/
+
+    p {
+        font-size: 12px;
+    }
+
+    img {
+        width: 54px;
+        height: 6px;
+    }
+}
+
+.news-inner {
+    overflow-x: hidden;
+}
+
+.news-content {
+    display: flex;
+    gap: 20px;
+    width: 1080px;
+    margin-bottom: 50px;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.news-card {
+    width: 345px;
+    height: 100%;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px var(--green);
+
+    /* ニュース記事の画像 */
+    img {
+        width: 100%;
+        min-width: 300px;
+        height: 220px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+}
+
+/* 投稿日付 */
+.date {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 投稿テーマ */
+.thema {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    height: 52px;
+}
+
+/* 投稿記事 */
+.text {
+    color: #666666;
+    font-size: 16px;
+    height: 100%;
+    height: 72px;
+}
+
+.news-gradation {
+    width: 16vw;
+    min-width: 186px;
+    height: 367px;
+    background: linear-gradient(90deg, #2295CF, #2590A0);
+    position: absolute;
+    top: 300px;
+    right: 0;
+    z-index: 1;
+}
+
+/* お知らせ一覧ボタン */
+.news-btn {
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -60px;
+
+        p {
+            color: var(--white);
+            font-size: 21px;
+            background-color: var(--green);
+            padding: 10px 60px;
+            transition: .2s;
+        }
+
+        p:hover {
+            opacity: 0.9;
+        }
+
+        img {
+            width: 60px;
+            height: 8px;
+            margin-left: -30px;
+        }
+    }
+}
+
+/* ------------------------------Ansel建築について */
+.company-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.company-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100px;
+}
+
+.company-content {
+    display: flex;
+    gap: 50px;
+
+    img {
+        width: 402px;
+        height: 283px;
+    }
+}
+
+.company-inner {
+    position: relative;
+}
+
+.company-gradation {
+    width: 40vw;
+    min-width: 370px;
+    height: 102px;
+    background: linear-gradient(90deg, #2295CF, #2590A0);
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+}
+
+
+/* ------------------------------私たちのサービスについて */
+.service-wrapper {
+    position: relative;
+
+    > img {
+        position: absolute;
+        bottom: -50px;
+        z-index: 0;
+        width: 100%;
+        height: 1080px;
+    }
+}
+
+.service-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.service-content {
+    display: flex;
+    gap: 50px;
+}
+
+.service-item {
+    position: relative;
+
+    img {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    .service-text {
+        width: 90%;
+        background-color: var(--white);
+        padding: 10%;
+        margin: -10px auto 0;
+        position: relative;
+        z-index: 20;
+
+        h3 {
+            color: var(--blue);
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--blue);
+            letter-spacing: 0;
+            height: 100%;
+            min-height: 75px;
+        }
+    }
+}
+
+
+/* ------------------------------施工事例 */
+.model-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.model-content {
+    margin-bottom: 100px;
+
+    p {
+        color: #777878;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.br-sp {
+    display: none;
+}
+
+.model-content-name {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    h4 {
+        background: linear-gradient(90deg, #2D73B1 0%, #2590A0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+    }
+}
+
+.slider-container {
+    margin: 30px auto 0;
+    max-width: 300px;
+    width: 100%;
+}
+
+.slider {
+    margin: 0 auto 30px;
+}
+
+.slick-img {
+
+    img {
+        width: 500px;
+        height: 354px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+}
+
+.thumbnail {
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+}
+
+.thumbnail-img {
+    margin-right: 10px;
+    opacity: .3;
+    transition: opacity .3s linear;
+}
+
+.thumbnail .slick-current {
+    opacity: 1;
+}
+
+.slide-arrow {
+    width: 60px;
+    height: 60px;
+}
+
+.prev-arrow {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+    background-color: var(--white);
+    border-radius: 30px;
+}
+
+.next-arrow {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    cursor: pointer;
+    background-color: var(--white);
+    border-radius: 30px;
+}
+
+
+
+
+/* ------------------------------お問い合わせフォーム */
+.contact-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.contact-group {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contact-label {
+    letter-spacing: 0;
+    width: 220px;
+    margin-right: 100px;
+}
+
+/* 入力欄 */
+.contact-text {
+    border: 1px solid #AAAAAA;
+    width: 350px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.required::after {
+    content: "必須";
+    color: #FFFFFF;
+    background-color: #E45959;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.checkbox {
+    display: block;
+    margin-bottom: 24px;
+
+    input[type="checkbox"] {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #333333;
+        vertical-align: -4px;
+        margin-right: 10px;
+    }
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: #AAAAAA;
+    margin-top: 10px;
+}
+
+.textarea-box {
+    width: 70%;
+}
+
+/* 備考欄テキストエリア */
+.contact-textarea {
+    border: 1px solid #AAAAAA;
+    width: 100%;
+    height: 120px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+/* 送信ボタン */
+.submit-btn {
+    display: block;
+    margin: auto;
+    width: 177px;
+    height: 50px;
+    text-align: center;
+    transition: .2s;
+
+    input {
+        color: #FFFFFF;
+        background-color: #2E5C63;
+        border: none;
+        font-size: 18px;
+        width: 177px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* -----------------------------------フッター */
+footer {
+    background-color: #2295CF;
+}
+
+.footer-wrapper {
+    display: flex;
+    gap: 15%;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+
+.footer-company-name {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer-company {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-about {
+    color: var(--white);
+
+    p {
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+}
+
+.footer-detail {
+    display: flex;
+    gap: 20px;
+    color: var(--white);
+    letter-spacing: 0.1rem;
+}
+
+.tableheader {
+    font-weight: 300;
+    text-align: left;
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.cell {
+    font-weight: 300;
+}
+
+.footer-nav ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.footer-nav li {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--white);
+    margin-bottom: 10px;
+
+    a {
+        color: var(--white);
+    }
+}
+
+.copyright {
+    color: var(--white);
+    background-color: #333333;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------
+TB
+-------------------- */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    /* ------------------------------ヘッダー */
+    .header-inner {
+        padding: 0 15px;
+    }
+
+    .logo p {
+        font-size: 24px;
+    }
+
+    .nav-item a {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+
+    .item-large {
+        font-size: 30px;
+    }
+
+
+    /* ------------------------------メインビジュアル */
+    .mv-inner img {
+        width: 60vw;
+        min-height: 40vh;
+    }
+
+    .catch-copy {
+        width: 80vw;
+    }
+
+    .main-copy p {
+        font-size: 8vw;
+    }
+
+    .sub-copy {
+        font-size: 27px;
+    }
+
+
+    /* ------------------------------理念 */
+    .philosophy-container {
+        padding: 0 15px;
+    }
+
+    .philosophy-content {
+        gap: 30px;
+    }
+
+
+    /* ------------------------------お知らせ */
+    .post-btn {
+        display: none;
+    }
+
+    .news-scroll-arrow {
+        display: block;
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        align-items: baseline;
+    }
+
+    .news-content {
+        /* overflow: hidden; */
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .news-content::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* ------------------------------Ansel建築について */
+    .company-container {
+        padding: 0 15px;
+    }
+
+    .company-content {
+        gap: 30px;
+    }
+
+
+    /* ------------------------------私たちのサービスについて */
+    .service-container {
+        padding: 0 15px;
+    }
+
+    .service-content {
+        gap: 30px;
+    }
+
+    /* ------------------------------施工事例 */
+    .model-container {
+        padding: 0 15px;
+    }
+
+    /* ------------------------------お問い合わせフォーム */
+    .contact-container {
+        padding: 0 15px;
+    }
+
+    .form-wrapper {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+
+    /* ------------------------------フッター */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------
+SP
+-------------------- */
+@media screen and (max-width: 767px) {
+
+    /* ------------------------------ヘッダー */
+    .header-inner {
+        padding: 0 15px;
+    }
+
+    .logo p {
+        font-size: 21px;
+    }
+
+    /* お問い合わせボタン */
+    .header-menu .contact-btn {
+        display: none;
+    }
+
+    /* ナビゲーションメニュー展開 */
+    .header-nav {
+        width: 85vw;
+    }
+
+    .nav-list {
+        margin-top: 30px;
+        margin-left: 15px;
+        }
+
+    .nav-item a {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+
+    .nav-item .contact-btn {
+        display: flex;
+    }
+
+    .item-large  {
+        font-size: 24px;
+    }
+
+
+    /* ------------------------------メインビジュアル */
+    .mv-inner img {
+        width: 85vw;
+        min-height: 35vh;
+    }
+
+    .catch-copy {
+        width: 100vw;
+        height: 60vh;
+        padding-top: 25%;
+        padding-left: 10%;
+
+    }
+
+    .main-copy p {
+        font-size: 10vw;
+
+        span {
+            font-size: 0.8em;
+        }
+    }
+
+    .sub-copy {
+        font-size: 21px;
+    }
+
+
+    /* ------------------------------理念 */
+    .philosophy-container {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .heading::after {
+        width: 30px;
+    }
+
+    .philosophy-content {
+        flex-direction: column;
+        gap: 50px;
+
+        img {
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    .philosophy-gradation {
+        top: 200px;
+    }
+
+
+    /* ------------------------------お知らせ */
+    .post-btn {
+        display: none;
+    }
+
+    .news-scroll-arrow {
+        display: block;
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        align-items: baseline;
+    }
+
+    .news-content {
+        overflow: hidden;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .news-gradation {
+        width: 16vw;
+        min-width: 186px;
+        height: 315px;
+    }
+
+    /* ------------------------------Ansel建築について */
+    .company-container {
+        padding: 0 15px;
+    }
+
+    .company-content {
+        flex-direction: column;
+        gap: 30px;
+
+        img {
+            width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    .company-gradation {
+        top: 200px;
+    }
+
+
+    /* ------------------------------私たちのサービスについて */
+    .blue-back {
+        height: 100%;
+    }
+
+    .service-container {
+        padding: 0 15px;
+    }
+
+    .service-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    /* ------------------------------施工事例 */
+
+    .model-content {
+        margin-bottom: 50px;
+    }
+
+    .model-content-name {
+
+        h4 {
+            font-size: 24px;
+        }
+    }
+
+    .model-container {
+        padding: 0 15px;
+    }
+
+    .br-sp {
+        display: block;
+    }
+
+    .slick-img {
+
+        img {
+            width: 75%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    }
+
+    .slide-arrow {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: var(--white);
+        border-radius: 15px;
+    }
+
+    .thumbnail-img {
+        margin-right: 5px;
+    }
+
+    .prev-arrow {
+        position: absolute;
+        top: 50%;
+    }
+
+    .next-arrow {
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+
+    /* ------------------------------お問い合わせフォーム */
+    .contact-container {
+        padding: 0 15px;
+    }
+
+    .form-wrapper {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .contact-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 備考欄テキストエリア */
+    .contact-textarea {
+        width: 345px;
+        height: 200px;
+    }
+
+
+    /* ------------------------------フッター */
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-company-name {
+        text-align: center;
+    }
+
+    .footer-company {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-about p {
+        text-align: center;
+    }
+
+    .footer-description {
+        margin: 0 auto 30px;
+    }
+
+    .footer-nav {
+        width: 120px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
