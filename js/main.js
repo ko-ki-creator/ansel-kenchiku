@@ -59,7 +59,7 @@ $(function () {
     });
 
     $(".thumbnail").slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         arrows: false,
         asNavFor: ".slider",
         focusOnSelect: true,
