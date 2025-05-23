@@ -54,7 +54,9 @@ PC
 
 /* ------------------------------ヘッダー */
 .header-wrapper {
-    height: 100px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: var(--white);
     position: fixed;
     top: 0;
@@ -359,7 +361,6 @@ PC
 
 .news-container {
     width: 100%;
-    max-width: 1080px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -368,7 +369,9 @@ PC
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 30px;
 
     .heading {
         margin-bottom: 0;
@@ -380,6 +383,7 @@ PC
     display: flex;
     gap: 30px;
     width: 150px;
+    display: none;
 }
 
 .arrow{
@@ -453,10 +457,12 @@ PC
 .news-scroll-arrow {
     display: flex;
     gap: 10px;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 20px;
     justify-content: end;
     align-items: baseline;
-    margin-bottom: 20px;
-    display: none; /*PC非表示*/
+    /* display: none; PC非表示 */
 
     p {
         font-size: 12px;
@@ -469,19 +475,23 @@ PC
 }
 
 .news-inner {
-    overflow-x: hidden;
+    width: 100%;
 }
 
 .news-content {
     display: flex;
     gap: 20px;
     width: 1080px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     padding: 10px;
     position: relative;
     z-index: 10;
-    overflow: hidden;
+    overflow: scroll;
     transition: transform 0.4s ease;
+
+    &::-webkit-scrollbar {
+            display: none;
+        }
 }
 
 .news-card {
@@ -715,7 +725,12 @@ PC
     width: 100%;
 }
 
-.slider {
+.slider-1,
+.slider-2,
+.slider-3,
+.slider-4,
+.slider-5,
+.slider-6 {
     margin: 0 auto 30px;
 }
 
@@ -729,7 +744,12 @@ PC
     }
 }
 
-.thumbnail {
+.thumbnail-1,
+.thumbnail-2,
+.thumbnail-3,
+.thumbnail-4,
+.thumbnail-5,
+.thumbnail-6 {
 
     img {
         width: 100%;
@@ -744,7 +764,12 @@ PC
     transition: opacity .3s linear;
 }
 
-.thumbnail .slick-current {
+.thumbnail-1 .slick-current,
+.thumbnail-2 .slick-current,
+.thumbnail-3 .slick-current,
+.thumbnail-4 .slick-current,
+.thumbnail-5 .slick-current,
+.thumbnail-6 .slick-current {
     opacity: 1;
 }
 
@@ -759,6 +784,7 @@ PC
     cursor: pointer;
     background-color: var(--white);
     border-radius: 30px;
+    z-index: 30;
 }
 
 .next-arrow {
