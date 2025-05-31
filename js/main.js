@@ -47,21 +47,111 @@ prevBtn.addEventListener('click', () => moveSlider('prev'));
 
 updateButtons();
 
-
+// 施工事例のスライド
 $(function () {
-        $(".slider").slick({
+        $(".slider-1").slick({
         // autoplay: true,
         arrows: true,
         fade: true,
-        asNavFor: ".thumbnail",
+        asNavFor: ".thumbnail-1",
         prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
         nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
     });
 
-    $(".thumbnail").slick({
-        slidesToShow: 4,
+    $(".thumbnail-1").slick({
+        slidesToShow: 5,
         arrows: false,
-        asNavFor: ".slider",
+        asNavFor: ".slider-1",
+        focusOnSelect: true,
+    });
+});
+
+$(function () {
+        $(".slider-2").slick({
+        // autoplay: true,
+        arrows: true,
+        fade: true,
+        asNavFor: ".thumbnail-2",
+        prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
+        nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
+    });
+
+    $(".thumbnail-2").slick({
+        slidesToShow: 5,
+        arrows: false,
+        asNavFor: ".slider-2",
+        focusOnSelect: true,
+    });
+});
+
+$(function () {
+        $(".slider-3").slick({
+        // autoplay: true,
+        arrows: true,
+        fade: true,
+        asNavFor: ".thumbnail-3",
+        prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
+        nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
+    });
+
+    $(".thumbnail-3").slick({
+        slidesToShow: 5,
+        arrows: false,
+        asNavFor: ".slider-3",
+        focusOnSelect: true,
+    });
+});
+
+$(function () {
+        $(".slider-4").slick({
+        // autoplay: true,
+        arrows: true,
+        fade: true,
+        asNavFor: ".thumbnail-4",
+        prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
+        nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
+    });
+
+    $(".thumbnail-4").slick({
+        slidesToShow: 5,
+        arrows: false,
+        asNavFor: ".slider-4",
+        focusOnSelect: true,
+    });
+});
+
+$(function () {
+        $(".slider-5").slick({
+        // autoplay: true,
+        arrows: true,
+        fade: true,
+        asNavFor: ".thumbnail-5",
+        prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
+        nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
+    });
+
+    $(".thumbnail-5").slick({
+        slidesToShow: 5,
+        arrows: false,
+        asNavFor: ".slider-5",
+        focusOnSelect: true,
+    });
+});
+
+$(function () {
+        $(".slider-6").slick({
+        // autoplay: true,
+        arrows: true,
+        fade: true,
+        asNavFor: ".thumbnail-6",
+        prevArrow: '<img src="images/prev.png" class="slide-arrow prev-arrow">',
+        nextArrow: '<img src="images/next.png" class="slide-arrow next-arrow">',
+    });
+
+    $(".thumbnail-6").slick({
+        slidesToShow: 5,
+        arrows: false,
+        asNavFor: ".slider-6",
         focusOnSelect: true,
     });
 });
